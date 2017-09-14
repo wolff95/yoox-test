@@ -120,13 +120,13 @@
         </div>
       </div>
       <div class="row layout-margin" style="padding-bottom : 15px">
-        <div class="col-xs-12">
-          <button class="btn btn-primary text-uppercase pull-right">show more news</button>
-          <button class="btn btn-primary text-uppercase pull-right">show less news</button>
+        <div class="col-xs-12 no-padding">
+          <button class="btn btn-primary text-uppercase pull-right news-button">show more news</button>
+          <button class="btn btn-primary text-uppercase pull-right news-button">show less news</button>
         </div>
       </div>
       <div class="row layout-margin" style="padding-bottom : 15px">
-        <div class="col-xs-3">
+        <div class="col-xs-2">
           <ul class="list-group">
             <li class="list-group-item" ng-click="hc.getSection('one')">One</li>
             <li class="list-group-item" ng-click="hc.getSection('two')">Two</li>
@@ -134,7 +134,7 @@
             <li class="list-group-item" ng-click="hc.getSection('four')">Four</li>
           </ul>
         </div>
-        <div class="col-xs-9 news-section">
+        <div class="col-xs-10 news-section">
           <div class="row">
             <div class="col-xs-8">
               <div class="row">
@@ -146,47 +146,50 @@
             <div class="col-xs-4">
               <p style="font-weight: bold;">{{hc.section.name}}</p>
               Dettagli: <p>{{hc.section.details}}</p>
-              Composizione: <p>{{hc.section.composition}}</p>
+              <p>{{hc.section.composition}}</p>
               Dettagli modella:<br/>
                <p ng-repeat="detail in hc.section.modelDetails">{{detail}}</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row layout-margin" style="padding-bottom : 15px">
-        <div class="col-xs-3">
+      <div class="row layout-margin" style="padding-bottom : 100px; border-bottom: 1px grey solid">
+        <div class="col-xs-2">
           <!-- VUOTOOOOOO -->
         </div>
-        <div class="col-xs-9">
+        <div class="col-xs-10">
           <h3 class="text-uppercase">Contact us</h3>
-          <h5>For more information about the services we offer, and how we can work with you, please provide us with the followinf items of information. Fields market by * are required</h5>
-          <form class="row">
-            <div class="col-xs-3">
-              <!-- TODO : Contact form html + validation -->
+          <br/>
+          <h5>For more information about the services we offer, and how we can work with you, please provide us with the followinf
+            items of information. Fields market by * are required</h5>
+          <form>
+            <div class="form-group contact-form">
+              <div class="row">
+                <div class="col-xs-2">
+                  <h4 class="text-uppercase">Contact name *</h4>
+                </div>
+                <div class="col-xs-4">
+                  <input type="text" class="form-control input-contact-form">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <h4 class="text-uppercase">Contact email address *</h4>
+                </div>
+                <div class="col-xs-4">
+                  <input type="email" class="form-control input-contact-form">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <h4 class="text-uppercase">Contact phone number</h4>
+                </div>
+                <div class="col-xs-4">
+                  <input type="text" class="form-control input-contact-form">
+                </div>
+              </div>
             </div>
-            <div class="col-xs-9"></div>
-            <div class="col-xs-12">
-              <h5 class="text-uppercase">Contact name *</h5>
-              <input type="text" class="input"></input>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="text-uppercase">Contact name *</h5>
-            </div>
-            <div class="col-xs-9">
-              <input type="text" class="input"></input>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="text-uppercase">Contact email address *</h5>
-            </div>
-            <div class="col-xs-9">
-              <input type="email" class="input"></input>
-            </div>
-            <div class="col-xs-3">
-              <h5 class="text-uppercase">Contact phone number *</h5>
-            </div>
-            <div class="col-xs-9">
-              <input type="number" class="input"></input>
-            </div>
+              <button type="submit" class="btn btn-default">Send</button>
           </form>
         </div>
       </div>
