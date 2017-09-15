@@ -50,9 +50,13 @@ h5, h6, button {
     background-color: #f3f3f3;
     border-top: 1px solid grey;
   }
- 
+
   .no-padding {
     padding : 0px
+  }
+
+  .no-margin {
+    margin : 0px
   }
 
   .height-auto{
