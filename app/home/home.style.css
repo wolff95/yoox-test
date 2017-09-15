@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: title;
-  src: url(assets/fonts/ttf/KNOC29JL.TTF) format('woff'),
-        url(assets/fonts/ttf/KNOC29JL.TTF) format('woff2');
+  src: url(assets/fonts/ttf/kock29jl.TTF) format('woff'),
+        url(assets/fonts/ttf/kock29jl.TTF) format('woff2');
 }
 
 @font-face {
@@ -31,11 +31,12 @@ h5, h6, button {
 
 .carousel-background {
     background-repeat: no-repeat;
-    background-color: grey;
+    background-color: #ececec;
   }
   
-  .font-paragraph {
-    color: grey;
+  
+  p {
+    color: #707070;
     font-size: 22px;
     font-weight: 300;
   }
@@ -75,9 +76,9 @@ h5, h6, button {
 
     input {
         border-radius:0px;
-        -webkit-box-shadow:inset 0 0 5px grey;
-        -moz-box-shadow:inset 0 0 5px grey;
-             box-shadow:inset 0 0 5px grey;
+        -webkit-box-shadow:inset 0 0 5px #707070;
+        -moz-box-shadow:inset 0 0 5px #707070;
+             box-shadow:inset 0 0 5px #707070;
  
      background: transparent;
     }
@@ -146,4 +147,40 @@ background: transparent;
 .animate-if.ng-leave.ng-leave-active {
   max-height: 0;
   opacity:1;
+}
+
+.y-list-item {
+  height: 79px;
+  background-color: #f3f3f3;
+  color: black;
+  font-size: 26px;
+  border-radius: 0;
+  border-top: 1px #ececec;
+  border-bottom: 1px #ececec;
+  border-bottom-left-radius: 0% !important;
+  border-bottom-right-radius: 0% !important;
+  border-top-left-radius: 0% !important;
+  border-top-right-radius: 0% !important;
+  border-color: #ececec;
+  padding:0;
+}
+
+.y-list-item.open {
+  background-color: white;
+}
+
+.y-item {
+border-top: 1px solid grey;
+border-bottom: 1px solid grey;
+padding: 10% 15px 10% 15px;
+height: 100%;
+}
+
+.y-list-item-image {
+  height: 26px;
+  margin-top:2px;
+}
+
+.font-paragraph {
+  font-weight: normal;
 }

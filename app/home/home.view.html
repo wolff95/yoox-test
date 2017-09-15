@@ -127,35 +127,44 @@
       </div>
       <div class="row layout-margin" style="padding-bottom : 15px">
         <div class="col-xs-2">
-          <ul class="list-group">
-            <li class="list-group-item" ng-click="hc.getSection('one')">One</li>
-            <li class="list-group-item" ng-click="hc.getSection('two')">Two</li>
-            <li class="list-group-item"  ng-click="hc.getSection('three')">Thre</li>
-            <li class="list-group-item" ng-click="hc.getSection('four')">Four</li>
+          <ul class="list-group" style="margin:0;">
+            <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('one', hc.sectionName)}" ng-click="hc.getSection('one')">
+              <div class="y-item">One<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></div>
+            </li>
+            <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('two', hc.sectionName)}" ng-click="hc.getSection('two')">
+                <div class="y-item">Two<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></div>
+            </li>
+            <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('three', hc.sectionName)}" ng-click="hc.getSection('three')">
+                <div class="y-item">Thre<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></div>
+            </li>
+            <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('four', hc.sectionName)}" ng-click="hc.getSection('four')">
+                <div class="y-item">Four<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></li></ul>
           </ul>
         </div>
-        <div class="col-xs-10 news-section">
+        <div class="col-xs-10">
           <div class="row">
             <div class="col-xs-8">
               <div class="row">
                 <div class="col-xs-3 no-padding" ng-repeat="image in hc.section.images">
-                    <img class="img-responsive" src="{{image}}" />
+                    <img class="img-responsive" style="max-width:125%" src="{{image}}" />
                 </div>
               </div>
             </div>
-            <div class="col-xs-4">
-              <p style="font-weight: bold;">{{hc.section.name}}</p>
-              Dettagli: <p>{{hc.section.details}}</p>
-              <p>{{hc.section.composition}}</p>
-              Dettagli modella:<br/>
-               <p ng-repeat="detail in hc.section.modelDetails">{{detail}}</p>
+            <div class="col-xs-4 font-paragraph news-section" style="min-height:394px">
+              <div class="row">
+                <div class="col-xs-6"><h3>{{hc.section.name}}</h3></div>
+                <div class="col-xs-6" style="padding-top:15px; padding-left:0px">
+                  <p>{{hc.section.details}}</p>
+                  <h4>Dettagli modella</h4><p ng-repeat="detail in hc.section.modelDetails">{{detail}}<br/></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row layout-margin" style="padding-bottom : 100px; border-bottom: 1px grey solid">
         <div class="col-xs-2">
-          <!-- VUOTOOOOOO -->
+          <!-- Empty -->
         </div>
         <div class="col-xs-10">
           <h3 class="text-uppercase">Contact us</h3>
