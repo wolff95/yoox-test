@@ -188,3 +188,17 @@ height: 100%;
 .font-paragraph {
   font-weight: normal;
 }
+
+.questo-collassa {
+  display: inline-block;
+  overflow: hidden;
+  height: 0;
+  transition: height 1s;
+  -webkit-transition: height 1s;        
+  -moz-transition: height 1s;        
+  -o-transition: height 1s;         
+}
+
+.collapsable.showMe {
+  height : 500px
+}
