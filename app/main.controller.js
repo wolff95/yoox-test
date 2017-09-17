@@ -18,4 +18,5 @@ angular.module('myApp.Main', [])
     return $http.get('assets/data/' + stringNumber + '.json');
   }
 
-}]);
+}])
+

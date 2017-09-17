@@ -56,7 +56,9 @@ h5, h6, button {
   }
 
   .no-margin {
-    margin : 0px
+    margin : 0px;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
   }
 
   .height-auto{
@@ -94,13 +96,22 @@ h5, h6, button {
     }
 }
 
-.news-button, .news-button:hover {
-  height: 30px;
-  background-color: grey;
+.news-button,
+.news-button:hover,
+.news-button:focus,
+.news-button:active {
+  height: 32px;
+  width: 175px;
+  background-color: #696969;
   color: white;
   border: 0px;
   border-radius: 0px;
   margin: 10px 5px;
+  font-family: base;
+  font-size: 18px;
+  border-color: #696969;
+  outline: none;
+  box-shadow: none;
 }
 
 .input-contact-form {
@@ -185,20 +196,104 @@ height: 100%;
   margin-top:2px;
 }
 
+.y-button-image {
+  height: 12px;
+  margin-top:5px;
+}
+
 .font-paragraph {
   font-weight: normal;
 }
 
-.questo-collassa {
-  display: inline-block;
+
+.show-more {
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  background: #e5feff;
   overflow: hidden;
-  height: 0;
-  transition: height 1s;
-  -webkit-transition: height 1s;        
-  -moz-transition: height 1s;        
-  -o-transition: height 1s;         
+  max-height: 0;
+}
+.show-more.show {
+  max-height: 300px;
 }
 
-.collapsable.showMe {
-  height : 500px
+.y-contact-form {
+  margin-bottom: 20px;
+  color: #707070
+}
+
+.y-contact-form:first {
+  margin-top: 10px;
+}
+
+.y-contact-submit-button,
+.y-contact-submit-button:hover,
+.y-contact-submit-button:active,
+.y-contact-submit-button:focus {
+  height:40px;
+  width: 150px;
+  color:white;
+  border-radius: 0px;
+  text-transform: uppercase;
+  background: linear-gradient(0deg, black, grey 100%) no-repeat;
+  font-family: base;
+  font-size: 22px;;
+  border-color: #696969;
+  outline: none;
+  box-shadow: none;
+}
+
+.y-contact-label {
+  font-size: 22px
+}
+
+
+
+/* when hiding the picture */
+.ng-hide-add         { -webkit-transition: max-height 5s; 
+  -moz-transition: max-height 5s; 
+  -ms-transition: max-height 5s; 
+  -o-transition: max-height 5s; 
+  transition: max-height 1s;   }
+
+/* when showing the picture */
+.ng-hide-remove      { -webkit-transition: max-height 1s; 
+  -moz-transition: max-height 1s; 
+  -ms-transition: max-height 1s; 
+  -o-transition: max-height 1s; 
+  transition: max-height 1s;   
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(63, 63, 63, 0.6);
+  box-shadow: 0 1px 1px rgba(230, 230, 230, 0.81) inset, 0 0 8px rgba(63, 63, 63, 0.6);
+  outline: 0 none;
+}
+
+button:focus, button:active {
+  border-color: rgba(63, 63, 63, 0.6);
+  box-shadow: 0 1px 1px rgba(230, 230, 230, 0.81) inset, 0 0 8px rgba(63, 63, 63, 0.6);
+  outline: 0 none;
+}
+
+.btn.active, .btn:active {
+  background-color: grey;
 }
