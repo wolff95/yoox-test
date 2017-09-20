@@ -4,7 +4,6 @@
 angular.module('myApp', [
   'ngRoute',
   'ngAnimate',
-  'dang-jssor',
   'myApp.Main',
   'myApp.Home'
 ])

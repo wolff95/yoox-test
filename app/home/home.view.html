@@ -1,33 +1,16 @@
 <div ng-controller="HomeCtrl as hc">
-  <div class="row">
-    <!-- RICORDA:
-      width:2100px -> width:600px
-      height: 800px -> height: 300px
-
-    -->
-    <div class="col-xs-12">
-        <div class="slides-container"
-        enable-jssor
-        jssor-options="basicUsageOptions"
-        jssor-trigger="true"
-        jssor-object="slide4"
-        jssor-on-changed="slideChanged(jssorData)"
-        style="position: relative; top: 0px; left: 0px; width: 2100px; height: 600px;">
-       <!-- Slides Container -->
-       <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 2100px; height: 600px;">
-           <div><img u="image" src="assets/images/carousel/carousel-001.jpg" /></div>
-           <div><img u="image" src="assets/images/carousel/carousel-002.jpg" /></div>
-           <div><img u="image" src="assets/images/carousel/carousel-003.jpg" /></div>
-       </div>
-   </div>
+  <div class="row no-margin">
+    <!-- carousel -->
+    <div class="col-xs-12 no-padding">
+      <carousel></carousel>
     </div>
   </div>
-  <div class="row layout-margin first-section" style="margin-top:40px; padding-bottom : 15px;">
+  <div class="row layout-margin first-section">
     <div class="col-xs-12 col-sm-4 col-lg-3">
       <h1 class="text-uppercase">About Yoox net-a-porter group</h1><br/>
       <h2 class="text-uppercase">What we do</h2>
     </div>
-    <div class="col-xs-12 col-sm-8 col-lg-9 font-paragraph" style="margin-top:10px; padding-left: 30px">
+    <div class="col-xs-12 col-sm-8 col-lg-9 font-paragraph padding-left-30px margin-top-10px">
       <div class="row">
         <div class="col-xs-12">
           <p><span class="heading-paragraph text-uppercase">Yoox net-a-porter group</span> is the global Internet retailing
@@ -38,8 +21,8 @@
         </div>
       </div>
       <div class="row">
-        <h3 class="text-uppercase" style="padding-left : 15px">Some of our works</h3>
-        <div class="col-xs-12 col-sm-6 col-lg-6" style="padding-left: 30px">
+        <h3 class="text-uppercase padding-left-15px">Some of our works</h3>
+        <div class="col-xs-12 col-sm-6 col-lg-6 padding-left-30px">
           <ul class="no-margin no-padding">
             <li>
               <p class="text-uppercase no-margin">Marni.com</p>
@@ -55,7 +38,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-lg-6" style="padding-left: 30px">
+        <div class="col-xs-12 col-sm-6 col-lg-6 padding-left-30px">
           <ul class="no-margin no-padding">
             <li>
               <p class="text-uppercase no-margin">Robertocavalli.com</p>
@@ -72,10 +55,10 @@
           </ul>
         </div>
       </div>
-      <p style="padding-top:10px">Click here to download a PDF of our recent works</p>
+      <p class="margin-top-10px">Click here to download a PDF of our recent works</p>
     </div>
   </div>
-  <div class="row layout-margin news-section" style="padding-bottom : 15px">
+  <div class="row layout-margin news-section padding-bottom-15px">
     <div class="col-xs-12">
       <h2 class="bold text-uppercase">News</h2>
     </div>
@@ -104,11 +87,11 @@
     </div>
   </div>
   <div id="derp" class="slideable">
-    <div class="row layout-margin news-section" style="padding-bottom : 15px">
+    <div class="row layout-margin news-section padding-bottom-15px">
       <div class="col-xs-12 col-sm-3 col-lg-3">
         <h3 class="text-uppercase">The new yoox.com there's new voice in the world of online shopping</h3><br/>
       </div>
-      <div class="col-xs-12 col-sm-9 col-lg-9 font-paragraph" style="margin-top:10px">
+      <div class="col-xs-12 col-sm-9 col-lg-9 font-paragraph margin-top-10px">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-lg-6">
             <p>Yoox.com, the leading virtual store for multi-brand fashion and design in the world, in collaboration with Vogue
@@ -127,11 +110,11 @@
         </div>
       </div>
     </div>
-    <div class="row layout-margin news-section" style="padding-bottom : 15px">
+    <div class="row layout-margin news-section padding-bottom-15px">
       <div class="col-xs-12 col-sm-3 col-lg-3">
         <h3 class="text-uppercase">Le cyclope ardent - the softness of ceramics and the richness of precious metals</h3><br/>
       </div>
-      <div class="col-xs-12 col-sm-9 col-lg-9 font-paragraph" style="margin-top:10px">
+      <div class="col-xs-12 col-sm-9 col-lg-9 font-paragraph margin-top-15px">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-lg-6">
             <p>Cutting-edge French design brand Moustache joins forces with the leading virtual store for multi-brand fashion
@@ -153,14 +136,14 @@
       </div>
     </div>
   </div>
-  <div class="row layout-margin" style="padding-bottom : 15px">
+  <div class="row layout-margin padding-bottom-15px">
     <div class="col-xs-12 no-padding">
       <button class="text-uppercase pull-right news-button" slide-toggle="#derp" ng-click="hc.open = !hc.open">{{hc.open ? 'show less news' : 'show more news'}}<img class="pull-right y-button-image" src="assets/images/1x/arrow_{{hc.open ? 'up' : 'down'}}.png"></button>
     </div>
   </div>
-  <div class="row layout-margin" style="padding-bottom : 15px"> 
+  <div class="row layout-margin padding-bottom-15px">
     <div class="col-xs-4 col-sm-2 col-lg-2" style="padding-left:0;">
-      <ul class="list-group" style="margin:0;">
+      <ul class="list-group no-margin">
         <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('one', hc.sectionName)}" ng-click="hc.getSection('one')">
           <div class="y-item">One<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></div>
         </li>
@@ -173,76 +156,76 @@
         <li class="list-group-item y-list-item text-uppercase" ng-class="{'open': hc.match('four', hc.sectionName)}" ng-click="hc.getSection('four')">
           <div class="y-item">Four<img class="pull-right y-list-item-image" src="assets/images/1x/arrow_right.png"></li>
       </ul>
-    </div>
-    <div class="col-xs-8 col-sm-10 col-lg-10">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-lg-8">
-          <div class="row">
-            <div class="col-xs-6 col-sm-3 col-lg-3 no-padding" ng-repeat="image in hc.section.images">
-              <img class="img-responsive" style="max-width:100%" src="{{image}}" />
+      </div>
+      <div class="col-xs-8 col-sm-10 col-lg-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-lg-8">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 col-lg-3 no-padding" ng-repeat="image in hc.section.images">
+                <img class="img-responsive" src="{{image}}" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-lg-4 font-paragraph news-section" style="min-height:315px">
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 col-lg-4">
-              <h3>{{hc.section.name}}</h3>
-            </div>
-            <div class="col-xs-12 col-sm-8 col-lg-8" style="padding-top:15px;">
-              <p>{{hc.section.details}}</p>
-              <h4>Dettagli modella</h4>
-              <p ng-repeat="detail in hc.section.modelDetails">{{detail}}<br/></p>
+          <div class="col-xs-12 col-sm-4 col-lg-4 font-paragraph news-section" style="min-height:292px">
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4">
+                <h3>{{hc.section.name}}</h3>
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8 padding-top-15px">
+                <p>{{hc.section.details}}</p>
+                <h4>Dettagli modella</h4>
+                <p ng-repeat="detail in hc.section.modelDetails">{{detail}}<br/></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row layout-margin" style="padding-bottom : 100px;">
-    <div class="col-sm-2 col-lg-2">
-      <!-- Empty -->
-    </div>
-    <div class="col-xs-12 col-sm-10 col-lg-10">
-      <h3 class="text-uppercase">Contact us</h3>
-      <br/>
-      <h5 style="padding-bottom:20px">For more information about the services we offer, and how we can work with you, please provide us with the followinf
-        items of information. Fields marked by * are required</h5>
-      <form>
-        <div class="form-group contact-form">
-          <div class="row y-contact-form">
-            <div class="col-xs-12 col-sm-3 col-lg-3">
-              <h4 class="text-uppercase y-contact-label">Contact name *</h4>
+    <div class="row layout-margin">
+      <div class="col-sm-2 col-lg-2">
+        <!-- Empty -->
+      </div>
+      <div class="col-xs-12 col-sm-10 col-lg-10">
+        <h3 class="text-uppercase">Contact us</h3>
+        <br/>
+        <p class="padding-bottom-15px">For more information about the services we offer, and how we can work with you, please provide us with the followinf
+          items of information. Fields marked by * are required</p>
+        <form>
+          <div class="form-group contact-form">
+            <div class="row y-contact-form">
+              <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 class="text-uppercase y-contact-label">Contact name *</h4>
+              </div>
+              <div class="col-xs-12 col-sm-5 col-lg-5">
+                <input type="text" class="form-control input-contact-form">
+              </div>
             </div>
-            <div class="col-xs-12 col-sm-5 col-lg-5">
-              <input type="text" class="form-control input-contact-form">
+            <div class="row y-contact-form">
+              <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 class="text-uppercase y-contact-label">Contact email address *</h4>
+              </div>
+              <div class="col-xs-12 col-sm-5 col-lg-5">
+                <input type="email" class="form-control input-contact-form">
+              </div>
+            </div>
+            <div class="row y-contact-form">
+              <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 class="text-uppercase y-contact-label">Contact phone number</h4>
+              </div>
+              <div class="col-xs-12 col-sm-5 col-lg-5">
+                <input type="text" class="form-control input-contact-form">
+              </div>
             </div>
           </div>
-          <div class="row y-contact-form">
-            <div class="col-xs-12 col-sm-3 col-lg-3">
-              <h4 class="text-uppercase y-contact-label">Contact email address *</h4>
-            </div>
-            <div class="col-xs-12 col-sm-5 col-lg-5">
-              <input type="email" class="form-control input-contact-form">
-            </div>
-          </div>
-          <div class="row y-contact-form">
-            <div class="col-xs-12 col-sm-3 col-lg-3">
-              <h4 class="text-uppercase y-contact-label">Contact phone number</h4>
-            </div>
-            <div class="col-xs-12 col-sm-5 col-lg-5">
-              <input type="text" class="form-control input-contact-form">
-            </div>
-          </div>
-        </div>
-        <div class="row">
+          <div class="row">
             <div class="col-xs-0 col-sm-3 col-lg-3">
               <!-- Empty -->
             </div>
-            <div class="col-xs-12 col-sm-5 col-lg-5">
-                <button type="submit" class="y-contact-submit-button">Send</button>
+            <div class="col-xs-12 col-sm-5 col-lg-5 padding-bottom-40px">
+              <button type="submit" class="y-contact-submit-button">Send</button>
             </div>
           </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
-</div>
