@@ -190,14 +190,15 @@
         <br/>
         <p class="padding-bottom-15px">For more information about the services we offer, and how we can work with you, please provide us with the followinf
           items of information. Fields marked by * are required</p>
-        <form>
+        <form name="contactForm" ng-submit="hc.sendEmail(user, contactForm.$valid)" novalidate>
           <div class="form-group contact-form">
             <div class="row y-contact-form">
               <div class="col-xs-12 col-sm-3 col-lg-3">
                 <h4 class="text-uppercase y-contact-label">Contact name *</h4>
               </div>
               <div class="col-xs-12 col-sm-5 col-lg-5">
-                <input type="text" class="form-control input-contact-form">
+                <input type="text" name="name" ng-model="user.name" class="form-control input-contact-form" required>
+                <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">Your name is required.</p>
               </div>
             </div>
             <div class="row y-contact-form">
@@ -205,7 +206,9 @@
                 <h4 class="text-uppercase y-contact-label">Contact email address *</h4>
               </div>
               <div class="col-xs-12 col-sm-5 col-lg-5">
-                <input type="email" class="form-control input-contact-form">
+                <input type="email" name="email" ng-model="user.email" class="form-control input-contact-form" required>
+                <p ng-show="contactForm.email.$error.required && !contactForm.email.$pristine" class="help-block">Your email is required.</p>
+                <p ng-show="contactForm.email.$error.email" class="help-block">Your email is invalid.</p>
               </div>
             </div>
             <div class="row y-contact-form">
@@ -213,7 +216,7 @@
                 <h4 class="text-uppercase y-contact-label">Contact phone number</h4>
               </div>
               <div class="col-xs-12 col-sm-5 col-lg-5">
-                <input type="text" class="form-control input-contact-form">
+                <input type="text" name="number" ng-model="user.number" ng-maxlength="11" class="form-control input-contact-form">
               </div>
             </div>
           </div>
@@ -222,7 +225,7 @@
               <!-- Empty -->
             </div>
             <div class="col-xs-12 col-sm-5 col-lg-5 padding-bottom-40px">
-              <button type="submit" class="y-contact-submit-button">Send</button>
+              <button type="submit" class="y-contact-submit-button" ng-disabled="contactForm.$invalid">Send</button>
             </div>
           </div>
         </form>

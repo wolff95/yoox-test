@@ -14,6 +14,11 @@ angular.module('myApp.Home', [])
         vm.match = function (val1, val2) {
             return val1 == val2;
         }
+        
+        vm.sendEmail = function (user, isValid) {
+            if (isValid)
+                alert('Hello ' + user.name + '! We have sent an email to: ' + user.email);
+        };
 
         vm.getSection('one');
     }])
